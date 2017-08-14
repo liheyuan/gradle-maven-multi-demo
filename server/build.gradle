@@ -1,0 +1,12 @@
+repositories {
+    jcenter()
+}
+
+project.archivesBaseName = 'gradle-multi-demo-server'
+
+dependencies {
+    compile 'com.google.guava:guava:21.0'
+
+    testCompile 'junit:junit:4.12'
+}
+

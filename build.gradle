@@ -1,0 +1,18 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    // Use as maven groupId
+    group = 'com.github.liheyuan'
+    // Use as maven version
+    project.version = 0.1
+
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    }
+
+}
+
