@@ -10,6 +10,24 @@ subprojects {
     // Use as maven version
     project.version = 0.1
 
+    // Java Docs
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+
+    // Java Sources
+    task javadocJar(type: Jar, dependsOn: javadoc) {
+        classifier = 'javadoc'
+        from javadoc.destinationDir
+    }
+
+    // Java Docs & Sources	
+    artifacts {
+        archives sourcesJar
+        archives javadocJar
+    }
+
     repositories {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
     }
